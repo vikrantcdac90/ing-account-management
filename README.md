@@ -26,7 +26,7 @@ Sample Response:
   "data": {
   "id": "0b5d9f2f-23fb-4fb3-b9b8-1e22c9b24451",
     "type": "SAVINGS",
-    "openingDate": "2023-01-01",
+    "openingDate": "2024-11-11",
     "temporary": false,
     "closureDate": null,
     "initialDeposit": 1000.0,
@@ -34,7 +34,7 @@ Sample Response:
       "id": 1,
       "firstName": "John",
       "lastName": "Doe",
-      "dateOfBirth": "1990-01-01",
+      "dateOfBirth": "1990-09-01",
       "email": "john.doe@example.com"
   }
 }
@@ -58,7 +58,7 @@ Sample Response:
   "data": {
     "id": "0b5d9f2f-23fb-4fb3-b9b8-1e22c9b24451",
     "type": "SAVINGS",
-    "openingDate": "2023-01-01",
+    "openingDate": "2024-11-01",
     "temporary": false,
     "closureDate": null,
     "initialDeposit": 1000.0,
@@ -84,7 +84,7 @@ Sample Request Body:
 
 {
   "type": "SAVINGS",
-  "openingDate": "2023-05-20",
+  "openingDate": "2024-11-20",
   "temporary": false,
   "closureDate": null,
   "initialDeposit": 1500.0,
@@ -106,7 +106,7 @@ Sample Response:
   "data": {
     "id": "a56f9f21-ee5d-4e6b-a70e-7a2142b44c3b",
     "type": "SAVINGS",
-    "openingDate": "2023-05-20",
+    "openingDate": "2024-11-20",
     "temporary": false,
     "closureDate": null,
     "initialDeposit": 1500.0,
@@ -135,9 +135,9 @@ Sample Request Body:
 
 {
   "type": "CHECKING",
-  "openingDate": "2023-05-20",
+  "openingDate": "2024-11-20",
   "temporary": true,
-  "closureDate": "2023-12-31",
+  "closureDate": "2026-12-31",
   "initialDeposit": 2000.0,
   "holder": {
     "firstName": "Alice",
@@ -157,9 +157,9 @@ Sample Response:
   "data": {
     "id": "a56f9f21-ee5d-4e6b-a70e-7a2142b44c3b",
     "type": "CHECKING",
-    "openingDate": "2023-05-20",
+    "openingDate": "2024-11-20",
     "temporary": true,
-    "closureDate": "2023-12-31",
+    "closureDate": "2027-12-31",
     "initialDeposit": 2000.0,
     "holder": {
       "id": 3,
@@ -195,9 +195,9 @@ Sample Response:
 {
     "id": "a56f9f21-ee5d-4e6b-a70e-7a2142b44c3b",
     "type": "CHECKING",
-    "openingDate": "2023-05-20",
+    "openingDate": "2024-11-20",
     "temporary": true,
-    "closureDate": "2023-12-31",
+    "closureDate": "2027-12-31",
     "initialDeposit": 2000.0,
     "holder": {
       "id": 3,
