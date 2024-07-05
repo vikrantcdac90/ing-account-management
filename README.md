@@ -1,17 +1,23 @@
 # ing-account-management
-account management
 
-Accounts API Documentation
-Base URL
-http://localhost:8080/api/accounts
+# Porject Name : ING Account Management Service
 
-Endpoints
-**GET All Accounts**
+# Swagger URL : http://localhost:8080/swagger-ui/index.html
 
-http://localhost:8080/api/accounts
+# Accounts API Documentation
+
+# Base URL  http://localhost:8080/api/accounts
+
+Endpoints Details 
+
+# GET All Accounts
+
+Example URL : http://localhost:8080/api/accounts
 
 Description: Retrieves all accounts.
+
 Response: Returns a list of all accounts with their details.
+
 Sample Response:
 
 {
@@ -32,12 +38,18 @@ Sample Response:
       "email": "john.doe@example.com"
   }
 }
-**GET /api/accounts/{id}
-**
+
+
+# GET By UUID
+
+Example URL : http://localhost:8080/api/accounts/0b5d9f2f-23fb-4fb3-b9b8-1e22c9b24451
+
 Description: Retrieves an account by its ID.
-Path Parameters:
-{id}: UUID of the account to retrieve.
+
+Path Parameters: {id} UUID of the account to retrieve.
+
 Response: Returns details of the account corresponding to the provided ID.
+
 Sample Response:
 
 {
@@ -60,10 +72,14 @@ Sample Response:
   }
 }
 
-**POST /api/accounts/create**
+# POST /api/accounts/create
+
+Example URL:  http://localhost:8080/api/accounts/create
 
 Description: Creates a new account.
+
 Request Body: AccountDto object representing the account details.
+
 Sample Request Body:
 
 {
@@ -79,10 +95,11 @@ Sample Request Body:
     "email": "alice.johnson@example.com"
   }
 }
+
 Response: Returns the created account details.
+
 Sample Response:
-json
-Copy code
+
 {
   "success": true,
   "message": "Account created successfully",
@@ -102,15 +119,20 @@ Copy code
     }
   }
 }
-PUT /api/accounts/{id}
+
+# PUT /api/accounts/{id}
 
 Description: Updates an existing account.
+
 Path Parameters:
+
 {id}: UUID of the account to update.
+
 Request Body: UpdateAccountDto object representing the updated account details.
+
 Sample Request Body:
-json
-Copy code
+
+
 {
   "type": "CHECKING",
   "openingDate": "2023-05-20",
@@ -124,10 +146,11 @@ Copy code
     "email": "alice.johnson@example.com"
   }
 }
+
 Response: Returns the updated account details.
+
 Sample Response:
-json
-Copy code
+
 {
   "success": true,
   "message": "Account updated successfully",
@@ -147,20 +170,40 @@ Copy code
     }
   }
 }
-DELETE /api/accounts/{id}
+
+
+# DELETE /api/accounts/{id}
 
 Description: Deletes an account by its ID.
-Path Parameters:
-{id}: UUID of the account to delete.
+
+Path Parameters: {id} UUID of the account to delete.
+
 Response: Returns a success message upon successful deletion.
+
 Sample Response:
-json
-Copy code
+
 {
   "success": true,
   "message": "Account deleted successfully"
 }
-Sample Data for Testing
-Use the following JSON data for testing the API operations:
 
 
+
+
+# Use the following JSON data for testing the API operations:
+
+{
+    "id": "a56f9f21-ee5d-4e6b-a70e-7a2142b44c3b",
+    "type": "CHECKING",
+    "openingDate": "2023-05-20",
+    "temporary": true,
+    "closureDate": "2023-12-31",
+    "initialDeposit": 2000.0,
+    "holder": {
+      "id": 3,
+      "firstName": "Alice",
+      "lastName": "Johnson",
+      "dateOfBirth": "1988-09-10",
+      "email": "alice.johnson@example.com"
+    }
+  }
