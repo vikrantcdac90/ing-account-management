@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +21,7 @@ import nl.ing.accounts.domain.model.Person;
 import nl.ing.accounts.domain.utility.AccountServiceUtil;
 
 @Service
+@Slf4j
 public class AccountsService {
 
 	private final AccountRepository accountRepository;
@@ -37,15 +39,18 @@ public class AccountsService {
 	}
 
 	public List<AccountDto> getAllAccounts() {
+		log.info("Fetching all accounts");
 		return accountRepository.findAll().stream().map(accountMapper::toDto).collect(Collectors.toList());
 	}
 
 	public AccountDto getAccountById(UUID id) {
+		log.info("get accounts by id : {}",id);
 		Account account = accountRepository.findById(id).orElseThrow(() -> new RuntimeException("Account not found"));
 		return accountMapper.toDto(account);
 	}
 
 	public AccountDto createAccount(AccountDto accountDto) {
+		log.info("creating accounts");
 		// Convert DTO to entity
 		Account account = accountMapper.toEntity(accountDto);
 		Person person = personMapper.toEntity(accountDto.getHolder());
@@ -62,6 +67,7 @@ public class AccountsService {
 
 	@Transactional
 	public AccountDto updateAccount(UUID id, UpdateAccountDto updatedAccountDto) {
+		log.info("update accounts : {}",id);
 		Account existingAccount = accountRepository.findById(id)
 				.orElseThrow(() -> new RuntimeException("Account not found"));
 
@@ -82,6 +88,7 @@ public class AccountsService {
 	}
 
 	public void deleteAccount(UUID id) {
+		log.info("delete accounts : {}",id);
 		Account accountToDelete = accountRepository.findById(id)
 				.orElseThrow(() -> new RuntimeException("Account not found"));
 
