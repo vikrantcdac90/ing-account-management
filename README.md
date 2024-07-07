@@ -84,14 +84,14 @@ Sample Request Body:
 
 {
   "type": "SAVINGS",
-  "openingDate": "2024-11-20",
+  "openingDate": "12-06-2024",
   "temporary": false,
   "closureDate": null,
   "initialDeposit": 1500.0,
   "holder": {
     "firstName": "Alice",
     "lastName": "Johnson",
-    "dateOfBirth": "1988-09-10",
+    "dateOfBirth": "09-01-1990",
     "email": "alice.johnson@example.com"
   }
 }
@@ -135,14 +135,14 @@ Sample Request Body:
 
 {
   "type": "CHECKING",
-  "openingDate": "2024-11-20",
+  "openingDate": "12-06-2024",
   "temporary": true,
-  "closureDate": "2026-12-31",
+  "closureDate": "12-06-2026",
   "initialDeposit": 2000.0,
   "holder": {
     "firstName": "Alice",
     "lastName": "Johnson",
-    "dateOfBirth": "1988-09-10",
+    "dateOfBirth": "09-01-1990",
     "email": "alice.johnson@example.com"
   }
 }
@@ -190,20 +190,19 @@ Sample Response:
 
 
 
-# Use the following JSON data for testing the API operations:
+# Use the following JSON data for testing the API operations: first create and then perform other opertaions as well
 
 {
-    "id": "a56f9f21-ee5d-4e6b-a70e-7a2142b44c3b",
     "type": "CHECKING",
-    "openingDate": "2024-11-20",
+    "openingDate": "12-06-2024",
     "temporary": true,
-    "closureDate": "2027-12-31",
+    "closureDate": "21-06-2027",
     "initialDeposit": 2000.0,
     "holder": {
       "id": 3,
       "firstName": "Alice",
       "lastName": "Johnson",
-      "dateOfBirth": "1988-09-10",
+      "dateOfBirth": "09-01-1990",
       "email": "alice.johnson@example.com"
     }
   }
