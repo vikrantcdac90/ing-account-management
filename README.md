@@ -1,6 +1,6 @@
 # ing-account-management
 
-# Porject Name : ING Account Management Service
+# Project Name : ING Account Management Service
 
 # Swagger URL : http://localhost:8080/swagger-ui/index.html
 
